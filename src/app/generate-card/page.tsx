@@ -26,6 +26,8 @@ const themes: Theme[] = [
 // Define the Page component
 const Page: React.FC = () => {
   // Access context methods and data
+  
+// eslint-disable-next-line no-console
   const { expenses, totalPrice } = useContext(ExpensesContext);
   // State for selected theme, title, loading, and confetti
   const [selectedTheme, setSelectedTheme] = useState<string>("#5165ff");
