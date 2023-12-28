@@ -10,18 +10,19 @@
 import { createContext, ReactNode, useState } from "react";
 import { Expense } from "@/app/types";
 
-type ExpensesContextType = {
-  expenses: Expense[];
-  addExpense: (name: string, price: number) => void;
-  removeExpense: (id: string) => void;
-  editExpense: (newData: Expense) => void;
-  clearAllExpenses: () => void;
-  totalPrice: () => number;
-};
+// type ExpensesContextType = {
+//   expenses: Expense[];
+//   addExpense: (name: string, price: number) => void;
+//   removeExpense: (id: string) => void;
+//   editExpense: (newData: Expense) => void;
+//   clearAllExpenses: () => void;
+//   totalPrice: () => number;
+// };
 
-const ExpensesContext = createContext<ExpensesContextType | null>(null);
+// const ExpensesContext = createContext<ExpensesContextType | null>(null);
+const ExpensesContext = createContext(null);
 
-const sampleExpensesList: Expense[] = [];
+// const sampleExpensesList: Expense[] = [];
 
 function getUID(): string {
   return Date.now().toString(36);
@@ -32,7 +33,7 @@ type ExpensesProviderProps = {
 };
 
 const ExpensesProvider = ({ children }: ExpensesProviderProps) => {
-  const [expenses, setExpenses] = useState<Expense[]>([...sampleExpensesList]);
+  const [expenses, setExpenses] = useState<Expense[]>([]);
 
   const addExpense = (name: string, price: number): void => {
     setExpenses((prev) => [
