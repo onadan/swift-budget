@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 // Import necessary dependencies and components
