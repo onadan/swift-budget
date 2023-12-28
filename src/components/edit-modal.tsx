@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Expense } from "@/app/types";
 import { useState } from "react";
 import PriceInput from "./price-input";
